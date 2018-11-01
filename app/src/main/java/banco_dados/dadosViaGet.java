@@ -42,7 +42,7 @@ import fonte_controle.Noticia;
 
 import static android.content.ContentValues.TAG;
 public class dadosViaGet {
-    private String ipBanco="http://pi.rbeninca.com.br/html/";
+    private String ipBanco="http://pi.rbeninca.com.br/";
     private ArrayList<Fonte> fontes=new ArrayList<Fonte>();
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
 

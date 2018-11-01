@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">APLICATIVO DE NOTÍCIAS INSTITUCIONAIS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">APLICATIVO DE NOTÍCIAS INSTITUCIONAIS</string>
+    <string name="nav_header_subtitle">app157@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">informações</string>
+    <string name="title_activity_fonte">Campus Gaspar</string>
+    <string name="title_activity_noticia">Noticia</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+</resources>

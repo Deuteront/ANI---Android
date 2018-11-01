@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/campus_ararangua"
+            android:icon="@drawable/point"
+            android:title="Câmpus Araranguá" />
+        <item
+            android:id="@+id/campus_canoinhas"
+            android:icon="@drawable/point"
+            android:title="Câmpus Canoinhas" />
+        <item
+            android:id="@+id/campus_cacador"
+            android:icon="@drawable/point"
+            android:title="Câmpus Caçador" />
+        <item
+            android:id="@+id/campus_chapeco"
+            android:icon="@drawable/point"
+            android:title="Câmpus Chapecó" />
+        <item
+            android:id="@+id/campus_criciuma"
+            android:icon="@drawable/point"
+            android:title="Câmpus Criciúma" />
+        <item
+            android:id="@+id/campus_florianopolis"
+            android:icon="@drawable/point"
+            android:title="Câmpus Florianópolis" />
+        <item
+            android:id="@+id/campus_florianopolis_continente"
+            android:icon="@drawable/point"
+            android:title="Câmpus Florianópolis-Con" />
+        <item
+            android:id="@+id/campus_guaropaba"
+            android:icon="@drawable/point"
+            android:title="Câmpus Garopaba" />
+        <item
+            android:id="@+id/campus_gaspar"
+            android:icon="@drawable/point"
+            android:title="Câmpus Gaspar" />
+        <item
+            android:id="@+id/campus_itajai"
+            android:icon="@drawable/point"
+            android:title="Câmpus Itajaí" />
+        <item
+            android:id="@+id/campus_jaragua_centro"
+            android:icon="@drawable/point"
+            android:title="Câmpus Jaraguá do Sul- Cen" />
+        <item
+            android:id="@+id/campus_jaragua_rau"
+            android:icon="@drawable/point"
+            android:title="Câmpus Jaraguá do Sul- Rau" />
+        <item
+            android:id="@+id/campus_joinville"
+            android:icon="@drawable/point"
+            android:title="Câmpus Joinville" />
+        <item
+            android:id="@+id/campus_lages"
+            android:icon="@drawable/point"
+            android:title="Câmpus Lages" />
+        <item
+            android:id="@+id/campus_palhoca"
+            android:icon="@drawable/point"
+            android:title="Câmpus Palhoça Bilíngue" />
+        <item
+            android:id="@+id/campus_carlos"
+            android:icon="@drawable/point"
+            android:title="Câmpus São Carlos" />
+        <item
+            android:id="@+id/campus_jose"
+            android:icon="@drawable/point"
+            android:title="Campus São José" />
+        <item
+            android:id="@+id/campus_lourenco"
+            android:icon="@drawable/point"
+            android:title="Campus São Lourenço- Oeste" />
+        <item
+            android:id="@+id/campus_miguel"
+            android:icon="@drawable/point"
+            android:title="Câmpus São Miguel do Oeste" />
+        <item
+            android:id="@+id/campus_tubarao"
+            android:icon="@drawable/point"
+            android:title="Câmpus Tubarão" />
+        <item
+            android:id="@+id/campus_urupema"
+            android:icon="@drawable/point"
+            android:title="Câmpus Urupema" />
+        <item
+            android:id="@+id/campus_xanxere"
+            android:icon="@drawable/point"
+            android:title="Câmpus Xanxerê" />
+
+    </group>
+
+
+</menu>

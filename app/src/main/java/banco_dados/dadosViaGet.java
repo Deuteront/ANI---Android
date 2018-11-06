@@ -200,6 +200,8 @@ public class dadosViaGet {
         urlConnectionFonte.setDoInput(true);
         urlConnectionFonte.setRequestMethod("POST");
         String charset = "UTF-8";
+        urlConnectionFonte.setRequestProperty("Content-type", "application/json");
+        urlConnectionFonte.setRequestProperty("Accept", "application/json");
         urlConnectionFonte.setRequestProperty("Accept-Charset", charset);
         urlConnectionFonte.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
         PrintStream printStreamFonte= new PrintStream(urlConnectionFonte.getOutputStream());
@@ -217,6 +219,8 @@ public class dadosViaGet {
         urlConnectionNoticia.setDoOutput(true);
         urlConnectionNoticia.setDoInput(true);
         urlConnectionNoticia.setRequestMethod("POST");
+        urlConnectionNoticia.setRequestProperty("Content-type", "application/json");
+        urlConnectionNoticia.setRequestProperty("Accept", "application/json");
         urlConnectionNoticia.setRequestProperty("Accept-Charset", charset);
         urlConnectionNoticia.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
         PrintStream printStreamNoticia= new PrintStream(urlConnectionNoticia.getOutputStream());

@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -91,10 +92,16 @@ public class NoticiaActivity extends AppCompatActivity {
 
         noticia = noticias.get(positionSelected);
         Log.i("pqpqqq", noticia.getTitulo());
-        TextView titulo = findViewById(R.id.TituloImagem);
-        titulo.setText(noticia.getTitulo());
+        TextView titulo =  findViewById(R.id.TituloImagem);
         TextView conteudo = findViewById(R.id.ConteudoNoticia);
-        conteudo.setText(noticia.getConteudo());
+        try {
+            titulo.setText(new String (noticia.getTitulo().toString().getBytes("ISO-8859-1"),"UTF-8"));
+            conteudo.setText(new String (noticia.getConteudo().toString().getBytes("ISO-8859-1"),"UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+
 
         ImageView iv = findViewById(R.id.imagemNoticia);
         Uri uri = resgatarImagemBanco.getBitMapFromURL(noticia.getImagem(),getApplicationContext());

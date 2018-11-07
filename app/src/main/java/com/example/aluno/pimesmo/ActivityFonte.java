@@ -17,6 +17,7 @@ import android.widget.CheckedTextView;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.FormatFlagsConversionMismatchException;
 
@@ -79,11 +80,16 @@ public class ActivityFonte extends AppCompatActivity {
         nomeFonte=fonte.getNome();
         Intvalor=idSelected;
         TextView conteudoFonte=findViewById(R.id.conteudo_fonte);
-        TextView tituloFonte=findViewById(R.id.titulo_fonte);
+        TextView tituloFonte=(TextView)findViewById(R.id.titulo_fonte);
 
         checkBox.setText(fonte.getFonteAssinada());
-        tituloFonte.setText(fonte.getNome());
-        conteudoFonte.setText(fonte.getConteudo());
+        try {
+            tituloFonte.setText(new String( fonte.getNome().toString().getBytes("ISO-8859-1"),"UTF-8"));
+            conteudoFonte.setText(new String( fonte.getConteudo().toString().getBytes("ISO-8859-1"),"UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
 
         tituloFonte.setTypeface(null, Typeface.BOLD);
 

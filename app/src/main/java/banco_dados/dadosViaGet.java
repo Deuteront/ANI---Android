@@ -166,27 +166,29 @@ public class dadosViaGet {
         if(!JsonPost.isEmpty()){
         Log.i("AAAAAAAAAAAAAAAAA","{\"phonetype\":\"N95\",\"cat\":\"WP\"}");
         Log.i("AAAAAAAAAAAAAAAAAAAA",JsonPost.toString());
-        String id ="{\"id\":[";
+        String id ="id=";
         String meio="";
         //if(JsonPost.size()<=1){
            // id ="{\"id\":"+JsonPost.get(0)+"}";
        // } else {
             for (int i = 0; i < JsonPost.size(); i++) {
-                meio = meio + JsonPost.get(i) + ",";
+                if ( JsonPost.size()!=i-1) {
+                    meio = meio + JsonPost.get(i) + ",";
+                }else{
+                    meio = meio + JsonPost.get(i);
+                }
             }
-
 
             meio = meio.substring(0, meio.length() - 1);
 
-            String final1 = ",0]}";
-            id = id + meio + final1;
+            id = id + meio;
       //  }
         JSONObject  jsonRootObject = new JSONObject();
-
+            Log.i("AAAAAAAAAAAAAAAAAAAA",id);
         try {
 
              jsonRootObject = new JSONObject(id);
-            Log.i("AAAAAAAAAAAAAAAAAAAA",jsonRootObject.toString());
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -206,7 +208,7 @@ public class dadosViaGet {
         urlConnectionFonte.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
         PrintStream printStreamFonte= new PrintStream(urlConnectionFonte.getOutputStream());
 
-        printStreamFonte.println(jsonRootObject);
+        printStreamFonte.println(id);
         urlConnectionFonte.connect();
         InputStream inputStreamFonte = urlConnectionFonte.getInputStream();
         BufferedReader readerFonte = new BufferedReader(new InputStreamReader(inputStreamFonte));
@@ -224,7 +226,7 @@ public class dadosViaGet {
         urlConnectionNoticia.setRequestProperty("Accept-Charset", charset);
         urlConnectionNoticia.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
         PrintStream printStreamNoticia= new PrintStream(urlConnectionNoticia.getOutputStream());
-        printStreamNoticia.println(jsonRootObject);
+        printStreamNoticia.println(id);
         urlConnectionNoticia.connect();
         InputStream inputStreamNoticia = urlConnectionNoticia.getInputStream();
         BufferedReader readerNoticia = new BufferedReader(new InputStreamReader(inputStreamNoticia));

@@ -181,7 +181,7 @@ public class dadosViaGet {
 
             meio = meio.substring(0, meio.length() - 1);
 
-            id = id + meio;
+            id = id + meio+",0";
       //  }
         JSONObject  jsonRootObject = new JSONObject();
             Log.i("AAAAAAAAAAAAAAAAAAAA",id);

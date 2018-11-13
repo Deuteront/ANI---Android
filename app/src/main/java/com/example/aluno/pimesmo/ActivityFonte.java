@@ -52,13 +52,23 @@ public class ActivityFonte extends AppCompatActivity {
         }
         int idSelected = getIntent().getIntExtra("ID",0);
         for(int i=0;i<fontes.size();i++){
-            Log.i("3532425",fontes.get(i).getNome());
+            Log.i("35324425",fontes.get(i).getNome());
+
+            String nome=fontes.get(i).getNome();
+            byte[] utf8 = new byte[0];
+            String decodedToUTF8 = null;
+            try {
+                decodedToUTF8 = new String(nome.getBytes("ISO-8859-1"), "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            Log.i("35324425",decodedToUTF8);
         }
         fonte=fontes.get(idSelected);
 
         Cursor cursor = bd.rawQuery("SELECT idFonte,nomeFonte,fonteAssinada FROM fontes where nomeFonte = '"+fonte.getNome()+"' ",null);
         cursor.moveToFirst();
-
+        Log.i("3532425",cursor.getString(1));
 
         if(fonte.getNome().equals(cursor.getString(1))) {
             fonte.setFonteAssinada(cursor.getString(2));
@@ -83,12 +93,10 @@ public class ActivityFonte extends AppCompatActivity {
         TextView tituloFonte=(TextView)findViewById(R.id.titulo_fonte);
 
         checkBox.setText(fonte.getFonteAssinada());
-        try {
-            tituloFonte.setText(new String( fonte.getNome().toString().getBytes("ISO-8859-1"),"UTF-8"));
-            conteudoFonte.setText(new String( fonte.getConteudo().toString().getBytes("ISO-8859-1"),"UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
+
+            tituloFonte.setText(fonte.getNome());
+            conteudoFonte.setText(fonte.getConteudo());
+
 
 
         tituloFonte.setTypeface(null, Typeface.BOLD);

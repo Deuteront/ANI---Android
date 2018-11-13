@@ -84,21 +84,22 @@ public class dadosViaGet {
 
             JSONObject jsonFontes;
             String ret;
+            String decodedToUTF8;
             for (int i = 0; i < count; i++) {
                 Fonte fonte=new Fonte();
                 jsonFontes = jsonObjectArrayFonte.getJSONObject(i);
                 fonte.setIdJornal(Integer.parseInt(jsonFontes.getString("idFonte")));
                 fonte.setFonteAssinada("Assinar");
 
-                ret = jsonFontes.getString("linkFonte");
+                ret =  new String(jsonFontes.getString("linkFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setLinkURL(ret);
 
-                ret = jsonFontes.getString("nomeFonte");
+                ret = new String(jsonFontes.getString("nomeFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setNome(ret);
 
-                ret = jsonFontes.getString("conteudoFonte");
+                ret =new String(jsonFontes.getString("conteudoFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setConteudo(ret);
 
@@ -120,11 +121,11 @@ public class dadosViaGet {
                 noticia.setIdFonte(Integer.parseInt(jsonNoticias.getString("idFonte")));
 
 
-                ret = jsonNoticias.getString("link");
+                ret = new String( jsonNoticias.getString("link").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setLink(ret);
 
 
-                ret = "    "+jsonNoticias.getString("conteudo");
+                ret = "    "+ new String(jsonNoticias.getString("conteudo").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setConteudo(ret);
                 Log.i("FINAL",ret);
                 ret = jsonNoticias.getString("dataPostagem");
@@ -134,16 +135,16 @@ public class dadosViaGet {
                 noticia.setIdNoticia(Integer.parseInt(jsonNoticias.getString("idNoticia")));
 
 
-                ret = jsonNoticias.getString("imagem");
+                ret = new String(jsonNoticias.getString("imagem").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setImagem(ret);
 
-                ret = jsonNoticias.getString("autor");
+                ret = new String(jsonNoticias.getString("autor").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setAutor(ret);
 
-                ret = jsonNoticias.getString("noticiaLida");
+                ret =  new String(jsonNoticias.getString("noticiaLida").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setNoticiaLida(ret);
 
-                ret = jsonNoticias.getString("titulo");
+                ret =  new String(jsonNoticias.getString("titulo").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setTitulo(ret);
 
                 fonteTemp=fontesComNoticias.get(noticia.getIdFonte()-1);
@@ -252,15 +253,15 @@ public class dadosViaGet {
                 fonte.setIdJornal(Integer.parseInt(jsonFontes.getString("idFonte")));
                 fonte.setFonteAssinada("Assinar");
 
-                ret = jsonFontes.getString("linkFonte");
+                ret =  new String(jsonFontes.getString("linkFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setLinkURL(ret);
 
-                ret = jsonFontes.getString("nomeFonte");
+                ret = new String(jsonFontes.getString("nomeFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setNome(ret);
 
-                ret = jsonFontes.getString("conteudoFonte");
+                ret =new String(jsonFontes.getString("conteudoFonte").getBytes("ISO-8859-1"), "UTF-8");
 
                 fonte.setConteudo(ret);
 
@@ -280,28 +281,31 @@ public class dadosViaGet {
 
                 noticia.setIdFonte(Integer.parseInt(jsonNoticias.getString("idFonte")));
 
-                ret = jsonNoticias.getString("link");
+
+                ret = new String( jsonNoticias.getString("link").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setLink(ret);
 
-                ret = "    "+jsonNoticias.getString("conteudo");
+
+                ret = "    "+ new String(jsonNoticias.getString("conteudo").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setConteudo(ret);
                 Log.i("FINAL",ret);
                 ret = jsonNoticias.getString("dataPostagem");
                 noticia.setDataPostagem(ret);
 
+
                 noticia.setIdNoticia(Integer.parseInt(jsonNoticias.getString("idNoticia")));
 
 
-                ret = jsonNoticias.getString("imagem");
+                ret = new String(jsonNoticias.getString("imagem").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setImagem(ret);
 
-                ret = jsonNoticias.getString("autor");
+                ret = new String(jsonNoticias.getString("autor").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setAutor(ret);
 
-                ret = jsonNoticias.getString("noticiaLida");
+                ret =  new String(jsonNoticias.getString("noticiaLida").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setNoticiaLida(ret);
 
-                ret = jsonNoticias.getString("titulo");
+                ret =  new String(jsonNoticias.getString("titulo").getBytes("ISO-8859-1"), "UTF-8");
                 noticia.setTitulo(ret);
                 for(int a=0;a<fontesComNoticias.size();a++) {
                     if(fontesComNoticias.get(a).getIdJornal()==noticia.getIdFonte()){

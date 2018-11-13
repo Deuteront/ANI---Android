@@ -94,12 +94,9 @@ public class NoticiaActivity extends AppCompatActivity {
         Log.i("pqpqqq", noticia.getTitulo());
         TextView titulo =  findViewById(R.id.TituloImagem);
         TextView conteudo = findViewById(R.id.ConteudoNoticia);
-        try {
-            titulo.setText(new String (noticia.getTitulo().toString().getBytes("ISO-8859-1"),"UTF-8"));
-            conteudo.setText(new String (noticia.getConteudo().toString().getBytes("ISO-8859-1"),"UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
+        titulo.setText(noticia.getTitulo());
+        conteudo.setText(noticia.getConteudo());
+
 
 
 

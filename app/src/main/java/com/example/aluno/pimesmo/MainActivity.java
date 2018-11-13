@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         dadosViaGet dadosViaPost = new dadosViaGet();
         ArrayList<Fonte> fontes = new ArrayList<Fonte>();

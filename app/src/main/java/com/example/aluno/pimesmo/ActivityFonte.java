@@ -1,9 +1,9 @@
 package com.example.aluno.pimesmo;
-import android.database.Cursor;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,18 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CheckedTextView;
 import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.FormatFlagsConversionMismatchException;
 
 import banco_dados.dadosViaGet;
 import fonte_controle.Fonte;
 
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 import static com.example.aluno.pimesmo.R.id.checkbox_fonte;
 
 @SuppressLint("Registered")

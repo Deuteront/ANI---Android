@@ -6,11 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
-
-import com.example.aluno.pimesmo.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

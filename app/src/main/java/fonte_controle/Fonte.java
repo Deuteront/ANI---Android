@@ -1,8 +1,5 @@
 package fonte_controle;
 
-import android.util.Log;
-
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class Fonte{

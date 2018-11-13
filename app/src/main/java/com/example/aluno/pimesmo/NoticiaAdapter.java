@@ -1,10 +1,7 @@
 package com.example.aluno.pimesmo;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.ContextWrapper;
-import android.graphics.Bitmap;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -15,16 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
-import banco_dados.dadosViaGet;
 import banco_dados.resgatarImagemBanco;
 import fonte_controle.Noticia;
-
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
 public class NoticiaAdapter extends ArrayAdapter<Noticia>{
 

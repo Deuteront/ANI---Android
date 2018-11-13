@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
@@ -14,25 +15,19 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import fonte_controle.*;
-import banco_dados.dadosViaGet;
-import fonte_controle.Noticia;
-
-import android.os.StrictMode;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import banco_dados.dadosViaGet;
+import fonte_controle.Fonte;
+import fonte_controle.Noticia;
 
 public class MainActivity extends AppCompatActivity
 

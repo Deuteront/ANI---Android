@@ -1,20 +1,14 @@
 package com.example.aluno.pimesmo;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -23,18 +17,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 
 import banco_dados.dadosViaGet;
 import banco_dados.resgatarImagemBanco;
-import fonte_controle.*;
-
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+import fonte_controle.Fonte;
+import fonte_controle.Noticia;
 
 public class NoticiaActivity extends AppCompatActivity {
     final dadosViaGet banco=new dadosViaGet();

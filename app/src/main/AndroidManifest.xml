@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aluno.pimesmo">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,10 +10,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label=""
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="ANI"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionAndStatusBar">
+        android:theme="@style/AppTheme.NoActionAndStatusBar"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
             android:label=""
@@ -30,7 +32,8 @@
         <activity
             android:name=".NoticiaActivity"
             android:label="@string/title_activity_noticia"
-            android:theme="@style/AppTheme.NoActionAndStatusBar"></activity>
-    </application>
+            android:theme="@style/AppTheme.NoActionAndStatusBar" />
+    </application
+        >
 
 </manifest>

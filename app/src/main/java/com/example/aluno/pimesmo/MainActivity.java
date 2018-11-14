@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             mListView.setAdapter(adapter);
         } else {
             ArrayList<String> strings = new ArrayList<String>();
-            strings.add("SEM FONTES ASSINADAS");
+            strings.add("BEM VINDO AO ANI-APLICATIVO DE NOTICIAS INSTITUCIONAIS, ELE É UM APLICATIVO DE NOTICIAS QUE ESTÁ EM FOCO OS CAMPUS DO IFSC. CLICANDO NOS 3 TRACINHOS AO LADO ESTÁ OS CAMPUS ONDE PODE-SE ASSINA-LOS E ASSIM TER ACESSO PELO MENU PRINCIAL (ONDE ESTÁ AGORA) AS NOTICIAS DAQUELE CAMPUS");
 
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strings);

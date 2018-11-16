@@ -26,11 +26,11 @@ import static com.example.aluno.pimesmo.R.id.checkbox_fonte;
 
 @SuppressLint("Registered")
 public class ActivityFonte extends AppCompatActivity {
-    public RequisicaoHTTP dados=new RequisicaoHTTP();
-    public Fonte fonte;
-    public SQLiteDatabase bd;
-    public String nomeFonte;
-    public int Intvalor;
+        public RequisicaoHTTP dados=new RequisicaoHTTP();
+        public Fonte fonte;
+        public SQLiteDatabase bd;
+        public String nomeFonte;
+        public int Intvalor;
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override

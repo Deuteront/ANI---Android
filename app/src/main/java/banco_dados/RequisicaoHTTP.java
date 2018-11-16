@@ -1,13 +1,10 @@
 package banco_dados;
-
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,8 +13,6 @@ import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
-
 import fonte_controle.Fonte;
 import fonte_controle.Noticia;
 public class RequisicaoHTTP {

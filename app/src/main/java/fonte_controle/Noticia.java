@@ -83,17 +83,5 @@ public class Noticia {
         this.idFonte = idFonte;
     }
 
-    public Noticia adicionarBancoNoticia(){
-        Noticia noticia =new Noticia();
-        noticia.setIdNoticia(idNoticia);
-        noticia.setAutor(autor);
-        noticia.setConteudo(conteudo);
-        noticia.setDataPostagem(dataPostagem);
-        noticia.setIdFonte(idFonte);
-        noticia.setLink(link);
-        noticia.setNoticiaLida(noticiaLida);
 
-        return noticia;
-
-    }
 }

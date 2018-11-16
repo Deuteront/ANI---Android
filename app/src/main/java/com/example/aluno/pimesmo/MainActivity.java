@@ -25,7 +25,7 @@ import android.widget.ListView;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import banco_dados.dadosViaGet;
+import banco_dados.RequisicaoHTTP;
 import fonte_controle.Fonte;
 import fonte_controle.Noticia;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        dadosViaGet dadosViaPost = new dadosViaGet();
+        RequisicaoHTTP dadosViaPost = new RequisicaoHTTP();
         ArrayList<Fonte> fontes = new ArrayList<Fonte>();
         ArrayList<Noticia> noticias = new ArrayList<Noticia>();
 
@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity
         bd.execSQL("CREATE TABLE IF NOT EXISTS primeiraCarga (idCarga INT(22), valor int);");
         bd.execSQL("CREATE TABLE IF NOT EXISTS fontes (idFonte INT(22), nomeFonte VARCHAR,fonteAssinada VARCHAR);");
         bd.execSQL("CREATE TABLE IF NOT EXISTS novaFonteAssinada (id INT(22));");
+     //   bd.execSQL("drop table primeiraCarga ;");
+       // bd.execSQL("drop table  fontes;");
+        //bd.execSQL("drop table  novaFonteAssinada ;");
         @SuppressLint("Recycle") Cursor cursorPrimeiraCarga = bd.rawQuery("SELECT idCarga,valor FROM primeiraCarga", null);
         if (cursorPrimeiraCarga.getCount() == 0) {
 

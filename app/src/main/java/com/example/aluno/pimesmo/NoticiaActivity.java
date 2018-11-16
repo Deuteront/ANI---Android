@@ -19,13 +19,13 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import banco_dados.dadosViaGet;
+import banco_dados.RequisicaoHTTP;
 import banco_dados.resgatarImagemBanco;
 import fonte_controle.Fonte;
 import fonte_controle.Noticia;
 
 public class NoticiaActivity extends AppCompatActivity {
-    final dadosViaGet banco=new dadosViaGet();
+    final RequisicaoHTTP banco=new RequisicaoHTTP();
     private SQLiteDatabase bd;
     @TargetApi(Build.VERSION_CODES.O)
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -35,7 +35,7 @@ public class NoticiaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_noticia);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        dadosViaGet dadosViaPost = new dadosViaGet();
+        RequisicaoHTTP dadosViaPost = new RequisicaoHTTP();
         ArrayList<Fonte> fontes = new ArrayList<Fonte>();
 
         long idSelected = getIntent().getLongExtra("ID", 0);

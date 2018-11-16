@@ -19,14 +19,14 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
-import banco_dados.dadosViaGet;
+import banco_dados.RequisicaoHTTP;
 import fonte_controle.Fonte;
 
 import static com.example.aluno.pimesmo.R.id.checkbox_fonte;
 
 @SuppressLint("Registered")
 public class ActivityFonte extends AppCompatActivity {
-    public dadosViaGet dados=new dadosViaGet();
+    public RequisicaoHTTP dados=new RequisicaoHTTP();
     public Fonte fonte;
     public SQLiteDatabase bd;
     public String nomeFonte;

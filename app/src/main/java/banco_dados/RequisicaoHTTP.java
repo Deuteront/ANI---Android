@@ -17,10 +17,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-import controles.ControlFonte;
+
 import fonte_controle.Fonte;
 import fonte_controle.Noticia;
-public class dadosViaGet {
+public class RequisicaoHTTP {
     private String ipBanco="http://64.137.238.22/";
     private ArrayList<Fonte> fontes=new ArrayList<Fonte>();
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -84,14 +84,14 @@ public class dadosViaGet {
 
                 fontes.add(fonte);
             }
-            ControlFonte controlFonte=new ControlFonte();
-            controlFonte.adicionarFonte(fontes);
+
+
             JSONObject jsonObjectNoticia = new JSONObject(bufferNoticia.toString());
             JSONArray jsonObjectArrayNoticia = jsonObjectNoticia.getJSONArray("noticias");
             int count2 = jsonObjectArrayNoticia.length();
             JSONObject jsonNoticias;
             Fonte fonteTemp;
-            ArrayList<Fonte> fontesComNoticias =controlFonte.mostrarFontes();
+            ArrayList<Fonte> fontesComNoticias =fontes;
             for (int i = 0; i < count2; i++) {
                 Noticia noticia=new Noticia();
                 jsonNoticias = jsonObjectArrayNoticia.getJSONObject(i);
@@ -246,14 +246,13 @@ public class dadosViaGet {
 
                 fontes.add(fonte);
             }
-            ControlFonte controlFonte=new ControlFonte();
-            controlFonte.adicionarFonte(fontes);
+
             JSONObject jsonObjectNoticia = new JSONObject(bufferNoticia.toString());
             JSONArray jsonObjectArrayNoticia = jsonObjectNoticia.getJSONArray("noticias");
             int count2 = jsonObjectArrayNoticia.length();
             JSONObject jsonNoticias;
             Fonte fonteTemp = null;
-            ArrayList<Fonte> fontesComNoticias =controlFonte.mostrarFontes();
+            ArrayList<Fonte> fontesComNoticias =fontes;
             for (int i = 0; i < count2; i++) {
                 Noticia noticia=new Noticia();
                 jsonNoticias = jsonObjectArrayNoticia.getJSONObject(i);

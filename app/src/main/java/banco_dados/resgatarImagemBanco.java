@@ -28,7 +28,7 @@ public class resgatarImagemBanco {
             File mypath=new File(directory,nomeImagemNoticia);
             Uri uri = Uri.fromFile(mypath);
             if (!mypath.exists()) {
-                dadosViaGet banco = new dadosViaGet();
+                RequisicaoHTTP banco = new RequisicaoHTTP();
                 URL url = new URL(banco.getIpBanco() + "imagens/" + nomeImagemNoticia);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setDoInput(true);
